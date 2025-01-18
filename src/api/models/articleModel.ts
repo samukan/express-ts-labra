@@ -45,7 +45,6 @@ const getAllArticles = (): Article[] => {
     )
     .all() as ArticleRow[];
 
-  // Strip out author_name and author_email from each row
   return rows.map((row) => {
     const {author_name: _n, author_email: _e, ...rest} = row;
     return rest as Article;
