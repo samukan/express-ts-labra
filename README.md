@@ -2,6 +2,10 @@
 
 An Express.js application template written in TypeScript using SQLite for database management.
 
+## Test Screenshot
+
+![Screenshot of Passing Tests](test\ts-labra-testit.png)
+
 ## Table of Contents
 
 - Introduction
@@ -59,10 +63,6 @@ This project is an example of an Express.js application using TypeScript and SQL
    ```
 
 2. The server will be running at `http://localhost:3000`.
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request.
 
 ### Contributors
 
