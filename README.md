@@ -4,7 +4,7 @@ An Express.js application template written in TypeScript using SQLite for databa
 
 ## Test Screenshot
 
-![Screenshot of Passing Tests](test\ts-labra-testit.png)
+![Screenshot of Passing Tests](test/ts-labra-testit.png)
 
 ## Table of Contents
 
