@@ -7,7 +7,7 @@ import randomstring from 'randomstring';
 // test that server is running
 describe('GET /', () => {
   it('should return 200 OK', async () => {
-    await request(app).get('/').expect(200);
+    await request(app).get('/api/v1').expect(200);
   });
 });
 
@@ -199,7 +199,6 @@ describe('Delete test data', () => {
       throw error;
     }
   });
-
   // Test DELETE /authors/:id
   it('DELETE /authors/:id should delete the author', async () => {
     await request(app).delete(`/api/v1/authors/${author.id}`).expect(204);

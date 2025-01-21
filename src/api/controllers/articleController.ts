@@ -1,11 +1,11 @@
 import {NextFunction, Request, Response} from 'express';
 import {Article} from '../../types/LocalTypes';
 import {
-  createArticle,
-  deleteArticle,
   getAllArticles,
   getArticle,
+  createArticle,
   updateArticle,
+  deleteArticle,
 } from '../models/articleModel';
 import CustomError from '../../classes/CustomError';
 
@@ -46,6 +46,7 @@ const articlePut = (
       Number(req.params.id),
       req.body.title,
       req.body.description,
+      req.body.author_id,
     );
     res.json(article);
   } catch (error) {
@@ -59,7 +60,7 @@ const articleDelete = (
   next: NextFunction,
 ) => {
   try {
-    deleteArticle(Number(req.params.id));
+    deleteArticle(Number(req.params.id), req.body.author_id);
     res.status(204).end();
   } catch (error) {
     next(new CustomError((error as Error).message, 500));
