@@ -192,7 +192,7 @@ describe('Delete test data', () => {
     try {
       await request(app)
         .delete(`/api/v1/articles/${article.id}`)
-        .send({author_id: article.author_id}) // Use article.author_id instead of author.id
+        .send({author_id: article.author_id})
         .expect(204);
     } catch (error) {
       console.error('Delete test failed:', error);
